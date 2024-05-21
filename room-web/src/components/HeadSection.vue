@@ -23,9 +23,12 @@ import Nav from "@/components/Nav.vue";
     width:60%;
     height:100%;
 }
-.section-one img{
+.section-one-image-desktop img{
     width:100%;
     height:70vh;
+}
+.section-one-image-mobile{
+    display:none;
 }
 .section-two{
     width:40%;
@@ -41,16 +44,16 @@ import Nav from "@/components/Nav.vue";
     height:100%;
 }
 .title{
-    font-size:40px;
+    font-size: 2vw;
 }
 .head-title-paragraph{
     line-height:2;
-    font-size:14px;
+    font-size: 1vw;
 }
 .shop-content{
     display:flex;
     text-transform:uppercase;
-    font-size:22px;
+    font-size: 1.5vw;
     font-weight:400;
     letter-spacing:10px;
 }
@@ -61,6 +64,9 @@ import Nav from "@/components/Nav.vue";
 }
 .visible-content-main-ctn{
 
+}
+.nav{
+    height:10vh;
 }
 .nav-btn-semi-ctn{
     width:100%;
@@ -93,6 +99,71 @@ import Nav from "@/components/Nav.vue";
 .nav-right-btn{
 
 }
+
+@media screen and (max-width:900px) {
+    .head-section-semi-ctn{
+        position:absolute;
+        display:flex;
+        flex-direction: column;
+    }
+    .section-one{
+        width:100%;
+        height:70vh;
+    }
+    .section-one-image-desktop img{
+        display:none;
+        
+    }
+    .section-one-image-mobile{
+        display: flex;
+        width:100%;
+        height:100%;
+        background: url("/public/mobile-image-hero-1.jpg") center/auto no-repeat;
+        background-size: cover;
+    }
+    .head-content-text-main{
+        padding:30px;
+    }
+    .section-two{
+        width:100%;
+        height:100%;
+    }
+    .title{
+        font-size: 30px;
+    }
+    .head-title-paragraph{
+        line-height:2;
+        font-size: 16px;
+    }
+    .shop-content{
+        font-size:20px;
+    }
+
+    .visible-content-main-ctn{
+        width:100%;
+        height:41vh;
+    }
+    .nav {
+        width:100%;
+        height: 10vh;
+    }
+    .nav-btn-semi-ctn{
+        flex-direction:column;
+        width:100%;
+        height:76%;        
+    }
+    .nav-btn-first-ctn {
+        width: 100%;
+        height: 80%;
+    }
+
+    .nav-btn-main-ctn {
+        display: flex;
+        justify-content:end;
+        width: 60%;
+        height: 6vh;
+    }
+}
 </style>
 
 
@@ -102,33 +173,37 @@ import Nav from "@/components/Nav.vue";
 
             <div class="head-section-semi-ctn">
                 <div class="section-one">
-                    <div class="section-one-image">
-                        <img src="/public/desktop-image-hero-1.jpg" alt=""/>
+                    <div class="section-one-image-desktop">
+                        <img src="/public/desktop-image-hero-1.jpg" alt="" />
+                    </div>
+                    <div class="section-one-image-mobile">
                     </div>
                 </div>
                 <div class="section-two">
                     <div class="head-content-text-main">
                         <div class="head-content-text-semi-ctn">
-                            <h2 class="title">Discover innovative ways to decorate</h2><br/>
+                            <h2 class="title">Discover innovative ways to decorate</h2><br />
                             <p class="head-title-paragraph">
                                 We provide unmatched quality, comfort, and style for property owners across the country.
-                                Our experts combine form and function in bringing your vision to life. Create a room in your
-                                own style with our collection and make your property a reflection of you and what you love.
-                            </p><br/><br/>
+                                Our experts combine form and function in bringing your vision to life. Create a room in
+                                your
+                                own style with our collection and make your property a reflection of you and what you
+                                love.
+                            </p><br /><br />
                             <div class="shop-content">
                                 <p class="shop-name">shop now</p>
                                 <div class="shop-icon">
-                                    <img src="/public/icon-arrow.svg" alt="arrow-forward"/>
+                                    <img src="/public/icon-arrow.svg" alt="arrow-forward" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
 
             <div class="visible-content">
                 <div class="visible-content-main-ctn">
-                    <Nav></Nav>
+                    <Nav class="nav"></Nav>
                     <div class="nav-btn-semi-ctn">
                         <div class="nav-btn-first-ctn"></div>
                         <div class="nav-btn-main-ctn">
@@ -136,13 +211,13 @@ import Nav from "@/components/Nav.vue";
                                 <i class='bx bx-chevron-left'></i>
                             </div>
                             <div class="nav-right-btn">
-                                <i class='bx bx-chevron-right' ></i>
+                                <i class='bx bx-chevron-right'></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
 </template>

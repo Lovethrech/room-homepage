@@ -27,7 +27,7 @@
     height:100%;
 }
 .footer-content-text-main{
-    padding:50px;
+    padding: 30px 50px;
     width:100%;
     height:100%;
 }
@@ -36,14 +36,20 @@
     height:100%;
 }
 .title{
-    font-size:20px;
+    font-size:1.3vw;
     text-align:center;
     text-transform:uppercase;
     letter-spacing:10px;
 }
 .footer-title-paragraph{
     line-height:2;
-    font-size:14px;
+    font-size:1vw;
+}
+
+@media screen and (max-width:900px){
+    .footer-section-main{
+        display:none;
+    }
 }
 </style>
 
@@ -76,7 +82,7 @@
 
                 <div class="section-image-main">
                     <div class="section-image-main-image">
-                        <img src="/public/image-about-dark.jpg" alt=""/>
+                        <img src="/public/image-about-light.jpg" alt=""/>
                     </div>
                 </div>
             </div>

@@ -16,3 +16,9 @@ body{
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
 }
+
+@media screen and (max-width:900px){
+  #app{
+    height:100%;
+  }
+}
