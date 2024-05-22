@@ -49,10 +49,10 @@
         display:none;
     }
     .logo-image-ctn{
-        position:fixed;
+        /*position:fixed;
         top:5.2vh;
         left:25vw;
-        right:25vw;
+        right:25vw; */
         width:80%;
         padding-left:20vw;
     }

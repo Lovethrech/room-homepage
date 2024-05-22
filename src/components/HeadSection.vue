@@ -23,6 +23,9 @@ import Nav from "@/components/Nav.vue";
     width:60%;
     height:100%;
 }
+.nav-mobile{
+    display:none;    
+}
 .section-one-image-desktop img{
     width:100%;
     height:70vh;
@@ -102,13 +105,19 @@ import Nav from "@/components/Nav.vue";
 
 @media screen and (max-width:900px) {
     .head-section-semi-ctn{
-        position:absolute;
+        position: relative;
+        z-index:1;
         display:flex;
         flex-direction: column;
     }
     .section-one{
         width:100%;
         height:70vh;
+    }
+    .nav-mobile{
+        display:flex;
+        position:absolute;
+        top:0;    
     }
     .section-one-image-desktop img{
         display:none;
@@ -144,6 +153,7 @@ import Nav from "@/components/Nav.vue";
         height:41vh;
     }
     .nav {
+        position:absolute;
         width:100%;
         height: 10vh;
     }
@@ -173,6 +183,7 @@ import Nav from "@/components/Nav.vue";
 
             <div class="head-section-semi-ctn">
                 <div class="section-one">
+                    <Nav class="nav-mobile"></Nav>
                     <div class="section-one-image-desktop">
                         <img src="/public/desktop-image-hero-1.jpg" alt="" />
                     </div>
