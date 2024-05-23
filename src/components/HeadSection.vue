@@ -106,7 +106,7 @@ const menuBarClick = () => {
 }
 .nav-left-btn:hover, .nav-right-btn:hover,.nav-left-btn-mobile:hover, .nav-right-btn-mobile:hover{
     cursor:pointer;
-    background-color: hsla(0, 0%, 0%, 0.507);
+    background-color: hsl(0, 1%, 26%);
     transition: all .5s;
 }
 .nav-left-btn i, .nav-right-btn i, .nav-left-btn-mobile i, .nav-right-btn-mobile i{
