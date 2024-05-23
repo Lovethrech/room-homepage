@@ -116,9 +116,10 @@ const menuBarClick = () => {
 .nav-btn-main-ctn-mobile{
     display:none;
 }
-.nav-right-btn{
-
+.shop-icon i{
+    margin: auto 0;
 }
+
 
 @media screen and (max-width:900px) {
     .head-section-semi-ctn{
@@ -218,7 +219,7 @@ const menuBarClick = () => {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="section-one-image-desktop">
                         <img src="/public/desktop-image-hero-1.jpg" alt="" />
                     </div>
@@ -239,7 +240,7 @@ const menuBarClick = () => {
                             <div class="shop-content">
                                 <p class="shop-name">shop now</p>
                                 <div class="shop-icon">
-                                    <img src="/public/icon-arrow.svg" alt="arrow-forward" />
+                                    <i class='bx bx-arrow-back bx-rotate-180'></i>
                                 </div>
                             </div>
                         </div>
