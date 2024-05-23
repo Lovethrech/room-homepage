@@ -1,9 +1,3 @@
-<script setup>
-//import { defineProps } from "vue";
-
-//const { menuBarClick } = defineProps(['menuBarClick']);
-</script>
-
 <style scoped>
 .nav-main-ctn{
     background-color: transparent;
