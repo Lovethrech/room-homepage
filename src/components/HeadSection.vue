@@ -208,9 +208,7 @@ const menuBarClick = () => {
             <div class="head-section-semi-ctn">
                 <div class="section-one">
                     <div class="mobile-interactive-interface">
-                        <Nav 
-                            :menuBarClick="menuBarClick"
-                        `   class="nav-mobile"
+                        <Nav class="nav-mobile"
                         >
                         </Nav>
                         <div class="nav-btn-main-ctn-mobile">

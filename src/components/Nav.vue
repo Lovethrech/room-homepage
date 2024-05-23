@@ -1,7 +1,7 @@
 <script setup>
-import { defineProps } from "vue";
+// import { defineProps } from "vue";
 
-const { menuBarClick } = defineProps(['menuBarClick']);
+// const { menuBarClick } = defineProps(['menuBarClick']);
 </script>
 
 <style scoped>
@@ -51,19 +51,22 @@ const { menuBarClick } = defineProps(['menuBarClick']);
 
 @media screen and (max-width:900px){
     .nav{
-        justify-content: space-around;
-        gap:2px;
+        justify-content: space-between;
+        
+    }
+    .nav-main {
+        gap: 0;
+        width: 70vw;
     }
     .nav-list-ctn{
         display:none;
     }
     .logo-image-ctn{
-        position:fixed;
-        top:5.2vh;
-        left:25vw;
-        right:25vw; 
         width:80%;
         padding-left:20vw;
+    }
+    .logo-image-ctn img{
+        margin: 0 auto;
     }
     .menu-icon-ctn{
         display: flex;
