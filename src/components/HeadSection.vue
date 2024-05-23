@@ -1,9 +1,67 @@
 <script setup>
 import { ref } from "vue";
 import Nav from "@/components/Nav.vue";
+import heroInfos from "@/data/heroInfos.json";
 
-const menuBarClick = () => {
+const heroSrc = ref("/public/desktop-image-hero-1.jpg");
+const heroMobileSrc = ref("/public/mobile-image-hero-1.jpg");
+const heroAlt = ref("Image hero one");
+const heroTextTitle = ref("Discover innovative ways to decorate");
+const heroTextParagraph = ref("We provide unmatched quality, comfort, and style for property owners across the country.Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.");
+
+const rightClick = () => {
+    if (heroSrc.value === "/public/desktop-image-hero-1.jpg") {
+        heroSrc.value = "/public/desktop-image-hero-2.jpg";
+        heroMobileSrc.value = "/public/mobile-image-hero-2.jpg";
+        heroAlt.value = "Image hero two";
+        heroTextTitle.value = "We are available all across the globe";
+        heroTextParagraph.value = "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we're in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today";
+
+    }
+    else if (heroSrc.value === "/public/desktop-image-hero-2.jpg") {
+        heroSrc.value = "/public/desktop-image-hero-3.jpg";
+        heroMobileSrc.value = "/public/mobile-image-hero-3.jpg";
+        heroAlt.value = "Image hero three";
+        heroTextTitle.value = "Manufactured with the best materials";
+        heroTextParagraph.value = "Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.";
+    }
+    else {
+        heroSrc.value = "/public/desktop-image-hero-1.jpg";
+        heroMobileSrc.value = "/public/mobile-image-hero-1.jpg";
+        heroAlt.value = "Image hero one";
+        heroTextTitle.value = "Discover innovative ways to decorate";
+        heroTextParagraph.value = "We provide unmatched quality, comfort, and style for property owners across the country.Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.";
+
+    }
+}
+
+const leftClick = () => {
     
+    if (heroSrc.value === "/public/desktop-image-hero-1.jpg") {
+        heroSrc.value = "/public/desktop-image-hero-3.jpg";
+        heroMobileSrc.value = "/public/mobile-image-hero-3.jpg";
+        heroAlt.value = "Image hero three";
+        heroTextTitle.value = "Manufactured with the best materials";
+        heroTextParagraph.value = "Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.";
+    }
+    else if (heroSrc.value === "/public/desktop-image-hero-3.jpg") {
+        heroSrc.value = "/public/desktop-image-hero-2.jpg";
+        heroMobileSrc.value = "/public/mobile-image-hero-2.jpg";
+        heroAlt.value = "Image hero two";
+        heroTextTitle.value = "We are available all across the globe";
+        heroTextParagraph.value = "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we're in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today";
+
+    }
+
+    
+    else {
+        heroSrc.value = "/public/desktop-image-hero-1.jpg";
+        heroMobileSrc.value = "/public/mobile-image-hero-1.jpg";
+        heroAlt.value = "Image hero one";
+        heroTextTitle.value = "Discover innovative ways to decorate";
+        heroTextParagraph.value = "We provide unmatched quality, comfort, and style for property owners across the country.Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.";
+
+    }
 }
 </script>
 
@@ -59,11 +117,11 @@ const menuBarClick = () => {
     font-size: 1vw;
 }
 .shop-content{
-    width:45%;
+    width:100%;
     color:hsl(0, 0%, 0%);
     display:flex;
     text-transform:uppercase;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-weight:400;
     letter-spacing:10px;
 }
@@ -145,8 +203,6 @@ const menuBarClick = () => {
         display: flex;
         width:100%;
         height:100%;
-        background: url("/public/mobile-image-hero-1.jpg") center/auto no-repeat;
-        background-size: cover;
     }
     .head-content-text-main{
         padding:30px;
@@ -193,10 +249,16 @@ const menuBarClick = () => {
     }
     .nav-btn-main-ctn-mobile{
         position:absolute;
-        top:63.5vh;
+        top:60.9vh;
         right:0;
         display:flex;
+        justify-content:end;
         height:60px;
+        width: 100%;
+        
+    }
+    .section-one-image-mobile img{
+        width:100%;
     }
 }
 </style>
@@ -211,32 +273,27 @@ const menuBarClick = () => {
                     <div class="mobile-interactive-interface">
                         <Nav class="nav-mobile"></Nav>
                         <div class="nav-btn-main-ctn-mobile">
-                            <div class="nav-left-btn-mobile">
+                            <div class="nav-left-btn-mobile" @click="leftClick">
                                 <i class='bx bx-chevron-left'></i>
                             </div>
-                            <div class="nav-right-btn-mobile">
+                            <div class="nav-right-btn-mobile" @click="rightClick">
                                 <i class='bx bx-chevron-right'></i>
                             </div>
                         </div>
                     </div>
 
                     <div class="section-one-image-desktop">
-                        <img src="/public/desktop-image-hero-1.jpg" alt="" />
+                        <img :src="heroSrc" :alt="heroAlt" />
                     </div>
                     <div class="section-one-image-mobile">
+                        <img :src="heroMobileSrc" :alt="heroAlt" />
                     </div>
                 </div>
                 <div class="section-two">
                     <div class="head-content-text-main">
                         <div class="head-content-text-semi-ctn">
-                            <h2 class="title">Discover innovative ways to decorate</h2><br />
-                            <p class="head-title-paragraph">
-                                We provide unmatched quality, comfort, and style for property owners across the country.
-                                Our experts combine form and function in bringing your vision to life. Create a room in
-                                your
-                                own style with our collection and make your property a reflection of you and what you
-                                love.
-                            </p><br /><br />
+                            <h2 class="title">{{ heroTextTitle}}</h2><br />
+                            <p class="head-title-paragraph">{{ heroTextParagraph}}</p><br /><br />
                             <div class="shop-content">
                                 <p class="shop-name">shop now</p>
                                 <div class="shop-icon">
@@ -254,10 +311,10 @@ const menuBarClick = () => {
                     <div class="nav-btn-semi-ctn">
                         <div class="nav-btn-first-ctn"></div>
                         <div class="nav-btn-main-ctn">
-                            <div class="nav-left-btn">
+                            <div class="nav-left-btn" @click="leftClick">
                                 <i class='bx bx-chevron-left'></i>
                             </div>
-                            <div class="nav-right-btn">
+                            <div class="nav-right-btn" @click="rightClick">
                                 <i class='bx bx-chevron-right'></i>
                             </div>
                         </div>
