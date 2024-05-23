@@ -208,9 +208,7 @@ const menuBarClick = () => {
             <div class="head-section-semi-ctn">
                 <div class="section-one">
                     <div class="mobile-interactive-interface">
-                        <Nav class="nav-mobile"
-                        >
-                        </Nav>
+                        <Nav class="nav-mobile"></Nav>
                         <div class="nav-btn-main-ctn-mobile">
                             <div class="nav-left-btn-mobile">
                                 <i class='bx bx-chevron-left'></i>
