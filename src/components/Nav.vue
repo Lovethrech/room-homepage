@@ -87,7 +87,7 @@ const menuBarClick=()=>{
         
     }
     .nav-main {
-        gap: 120px;
+        gap: 10px;
         width: 100vw;
     }
     .nav-list-ctn{
