@@ -1,7 +1,7 @@
 <script setup>
-import { defineProps } from "vue";
+//import { defineProps } from "vue";
 
-const { menuBarClick } = defineProps(['menuBarClick']);
+//const { menuBarClick } = defineProps(['menuBarClick']);
 </script>
 
 <style scoped>
