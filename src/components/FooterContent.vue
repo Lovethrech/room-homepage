@@ -48,7 +48,31 @@
 
 @media screen and (max-width:900px){
     .footer-section-main{
-        display:none;
+        display: ;
+    }
+    .footer-section-semi-ctn{
+        position:relative;
+        z-index:1;
+        flex-direction: column;
+    }
+
+    .section-image-main, .section-two{
+        width:100%;
+    }
+    .section-image-main img{
+        width:100%;
+        height:100%;
+    }
+    .title{
+        font-size:18px;
+        text-align:left;
+        line-height:2;
+    }
+    .footer-title-paragraph{
+        font-size:16px;
+    }
+    .footer-content-text-main{
+        padding:30px;
     }
 }
 </style>

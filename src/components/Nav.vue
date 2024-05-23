@@ -1,3 +1,9 @@
+<script setup>
+import { defineProps } from "vue";
+
+const { menuBarClick } = defineProps(['menuBarClick']);
+</script>
+
 <style scoped>
 .nav-main-ctn{
     background-color: transparent;
@@ -18,6 +24,9 @@
 }
 .menu-icon-ctn {
     display:none;
+}
+.logo-image-ctn:hover{
+    cursor:pointer;
 }
 .nav-list-ctn{
     list-style:none;
@@ -49,10 +58,10 @@
         display:none;
     }
     .logo-image-ctn{
-        /*position:fixed;
+        position:fixed;
         top:5.2vh;
         left:25vw;
-        right:25vw; */
+        right:25vw; 
         width:80%;
         padding-left:20vw;
     }
@@ -62,6 +71,9 @@
         margin:0;
         padding:0;
     }
+    .menu-icon-ctn:hover{
+        cursor:pointer;
+    }
 }
 </style>
 
@@ -69,7 +81,7 @@
 <template>
     <div class="nav-main-ctn">
         <div class="nav-main">
-            <div class="menu-icon-ctn">
+            <div class="menu-icon-ctn" @click="menuBarClick">
                 <i class='bx bx-menu'></i>
             </div>
             <div class="logo-image-ctn">

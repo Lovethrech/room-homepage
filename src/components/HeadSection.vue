@@ -1,5 +1,10 @@
 <script setup>
+import { ref } from "vue";
 import Nav from "@/components/Nav.vue";
+
+const menuBarClick = () => {
+    
+}
 </script>
 
 
@@ -54,11 +59,17 @@ import Nav from "@/components/Nav.vue";
     font-size: 1vw;
 }
 .shop-content{
+    width:45%;
+    color:hsl(0, 0%, 0%);
     display:flex;
     text-transform:uppercase;
     font-size: 1.5vw;
     font-weight:400;
     letter-spacing:10px;
+}
+.shop-content:hover{
+    cursor: pointer;
+    color:hsla(0, 0%, 0%, 0.336);
 }
 
 .visible-content{
@@ -86,19 +97,25 @@ import Nav from "@/components/Nav.vue";
     width:40%;
     height:8vh;
 }
-.nav-left-btn, .nav-right-btn{
+.nav-left-btn, .nav-right-btn, .nav-left-btn-mobile, .nav-right-btn-mobile{
     width:100px;
     background-color: hsl(0, 0%, 0%);
-    color:hsl(0, 0%, 100%);
+    color:hsl(0, 2%, 61%);
     display:flex;
     place-items:center;
-
 }
-.nav-left-btn i, .nav-right-btn i{
+.nav-left-btn:hover, .nav-right-btn:hover,.nav-left-btn-mobile:hover, .nav-right-btn-mobile:hover{
+    cursor:pointer;
+    background-color: hsla(0, 0%, 0%, 0.507);
+    transition: all .5s;
+}
+.nav-left-btn i, .nav-right-btn i, .nav-left-btn-mobile i, .nav-right-btn-mobile i{
     margin:0 auto;
     font-size:50px;
 }
-
+.nav-btn-main-ctn-mobile{
+    display:none;
+}
 .nav-right-btn{
 
 }
@@ -173,6 +190,13 @@ import Nav from "@/components/Nav.vue";
         width: 60%;
         height: 6vh;
     }
+    .nav-btn-main-ctn-mobile{
+        position:absolute;
+        top:63.5vh;
+        right:0;
+        display:flex;
+        height:60px;
+    }
 }
 </style>
 
@@ -183,7 +207,22 @@ import Nav from "@/components/Nav.vue";
 
             <div class="head-section-semi-ctn">
                 <div class="section-one">
-                    <Nav class="nav-mobile"></Nav>
+                    <div class="mobile-interactive-interface">
+                        <Nav 
+                            :menuBarClick="menuBarClick"
+                        `   class="nav-mobile"
+                        >
+                        </Nav>
+                        <div class="nav-btn-main-ctn-mobile">
+                            <div class="nav-left-btn-mobile">
+                                <i class='bx bx-chevron-left'></i>
+                            </div>
+                            <div class="nav-right-btn-mobile">
+                                <i class='bx bx-chevron-right'></i>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="section-one-image-desktop">
                         <img src="/public/desktop-image-hero-1.jpg" alt="" />
                     </div>
