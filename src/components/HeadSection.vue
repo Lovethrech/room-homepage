@@ -1,33 +1,32 @@
 <script setup>
 import { ref } from "vue";
 import Nav from "@/components/Nav.vue";
-import heroInfos from "@/data/heroInfos.json";
 
-const heroSrc = ref("/public/desktop-image-hero-1.jpg");
-const heroMobileSrc = ref("/public/mobile-image-hero-1.jpg");
+const heroSrc = ref("/desktop-image-hero-1.jpg");
+const heroMobileSrc = ref("/mobile-image-hero-1.jpg");
 const heroAlt = ref("Image hero one");
 const heroTextTitle = ref("Discover innovative ways to decorate");
 const heroTextParagraph = ref("We provide unmatched quality, comfort, and style for property owners across the country.Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.");
 
 const rightClick = () => {
-    if (heroSrc.value === "/public/desktop-image-hero-1.jpg") {
-        heroSrc.value = "/public/desktop-image-hero-2.jpg";
-        heroMobileSrc.value = "/public/mobile-image-hero-2.jpg";
+    if (heroSrc.value === "/desktop-image-hero-1.jpg") {
+        heroSrc.value = "/desktop-image-hero-2.jpg";
+        heroMobileSrc.value = "/mobile-image-hero-2.jpg";
         heroAlt.value = "Image hero two";
         heroTextTitle.value = "We are available all across the globe";
         heroTextParagraph.value = "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we're in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today";
 
     }
-    else if (heroSrc.value === "/public/desktop-image-hero-2.jpg") {
-        heroSrc.value = "/public/desktop-image-hero-3.jpg";
-        heroMobileSrc.value = "/public/mobile-image-hero-3.jpg";
+    else if (heroSrc.value === "/desktop-image-hero-2.jpg") {
+        heroSrc.value = "/desktop-image-hero-3.jpg";
+        heroMobileSrc.value = "/mobile-image-hero-3.jpg";
         heroAlt.value = "Image hero three";
         heroTextTitle.value = "Manufactured with the best materials";
         heroTextParagraph.value = "Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.";
     }
     else {
-        heroSrc.value = "/public/desktop-image-hero-1.jpg";
-        heroMobileSrc.value = "/public/mobile-image-hero-1.jpg";
+        heroSrc.value = "/desktop-image-hero-1.jpg";
+        heroMobileSrc.value = "/mobile-image-hero-1.jpg";
         heroAlt.value = "Image hero one";
         heroTextTitle.value = "Discover innovative ways to decorate";
         heroTextParagraph.value = "We provide unmatched quality, comfort, and style for property owners across the country.Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.";
@@ -37,16 +36,16 @@ const rightClick = () => {
 
 const leftClick = () => {
     
-    if (heroSrc.value === "/public/desktop-image-hero-1.jpg") {
-        heroSrc.value = "/public/desktop-image-hero-3.jpg";
-        heroMobileSrc.value = "/public/mobile-image-hero-3.jpg";
+    if (heroSrc.value === "/desktop-image-hero-1.jpg") {
+        heroSrc.value = "/desktop-image-hero-3.jpg";
+        heroMobileSrc.value = "/mobile-image-hero-3.jpg";
         heroAlt.value = "Image hero three";
         heroTextTitle.value = "Manufactured with the best materials";
         heroTextParagraph.value = "Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.";
     }
-    else if (heroSrc.value === "/public/desktop-image-hero-3.jpg") {
-        heroSrc.value = "/public/desktop-image-hero-2.jpg";
-        heroMobileSrc.value = "/public/mobile-image-hero-2.jpg";
+    else if (heroSrc.value === "/desktop-image-hero-3.jpg") {
+        heroSrc.value = "/desktop-image-hero-2.jpg";
+        heroMobileSrc.value = "/mobile-image-hero-2.jpg";
         heroAlt.value = "Image hero two";
         heroTextTitle.value = "We are available all across the globe";
         heroTextParagraph.value = "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we're in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today";
@@ -55,8 +54,8 @@ const leftClick = () => {
 
     
     else {
-        heroSrc.value = "/public/desktop-image-hero-1.jpg";
-        heroMobileSrc.value = "/public/mobile-image-hero-1.jpg";
+        heroSrc.value = "/desktop-image-hero-1.jpg";
+        heroMobileSrc.value = "/mobile-image-hero-1.jpg";
         heroAlt.value = "Image hero one";
         heroTextTitle.value = "Discover innovative ways to decorate";
         heroTextParagraph.value = "We provide unmatched quality, comfort, and style for property owners across the country.Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.";
@@ -133,9 +132,6 @@ const leftClick = () => {
 .visible-content{
     position:fixed;
     width:100%;
-}
-.visible-content-main-ctn{
-
 }
 .nav{
     height:10vh;
