@@ -95,7 +95,7 @@ const menuBarClick=()=>{
     }
     .logo-image-ctn{
         width:80%;
-        padding-right:32vw;
+        padding-right:3vw;
     }
     .logo-image-ctn img{
         margin: 0 auto;
